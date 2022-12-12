@@ -1,5 +1,3 @@
-pip install python-binance
-
 import pandas as pd 
 from binance.client import Client
 import streamlit as st
