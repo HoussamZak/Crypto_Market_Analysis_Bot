@@ -1,7 +1,10 @@
+pip install python-binance
+
 import pandas as pd 
 from binance.client import Client
 import streamlit as st
 import ccxt
+
 
 client = Client()
 
@@ -40,7 +43,7 @@ dropdown = st.selectbox('Pick the crypto/coin of interest!', tickers)
 
 start = st.date_input('Start', value = pd.to_datetime('2021-10-31'))
 
-investment = st.number_input('Choose amount invested monthly')
+investment = st.number_input('Choose an amount that you will invest once (Lump Sum) or on a monthly basis (DCA)')
 
 def getdata(symbol, start):
     start = str(start)
